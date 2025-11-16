@@ -1,0 +1,124 @@
+.perfil-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.perfil-modal {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  width: 90%;
+  max-width: 480px;
+  color: #fff;
+  animation: fadeInUp 0.5s ease;
+}
+
+.close-icon {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.close-icon:hover {
+  color: #00e0ff;
+}
+
+.perfil-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #00c8d6;
+  margin-bottom: 25px;
+}
+
+.perfil-field {
+  margin-bottom: 15px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.perfil-modal input {
+  width: 100%;
+  padding: 10px 36px 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.field-icon {
+  position: absolute;
+  right: 10px;
+  color: #00bcd4;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.field-icon:hover {
+  color: #00e5ff;
+}
+
+.perfil-modal input:disabled {
+  opacity: 0.7;
+}
+
+.perfil-modal input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px #00bcd4;
+}
+
+.perfil-modal button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #00bcd4;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+.perfil-modal button[type="submit"]:hover:not(:disabled) {
+  background-color: #0097a7;
+  transform: scale(1.03);
+}
+.perfil-modal button[type="submit"]:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+.perfil-msg {
+  text-align: center;
+  margin-top: 12px;
+  color: #00e5ff;
+  font-weight: 600;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

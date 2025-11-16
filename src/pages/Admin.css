@@ -1,0 +1,187 @@
+/* ===== Fondo general ===== */
+.admin-page {
+  position: relative;
+  min-height: 100vh;
+  background: url("../assets/301986-frederika_1920x1080.jpg") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Overlay con blur ===== */
+.admin-overlay {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+/* ===== Contenedor principal ===== */
+.admin-section {
+  width: 90%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: none;
+  border-bottom: none;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  padding: 35px 30px;
+  backdrop-filter: blur(8px);
+  animation: fadeInUp 0.8s ease;
+  margin-bottom: 40px;
+}
+
+/* ===== Animación ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Título ===== */
+.admin-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Subtítulos ===== */
+.admin-section h4 {
+  color: #00bcd4;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* ===== Tablas ===== */
+.admin-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+}
+
+/* Encabezado */
+.admin-section thead {
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.admin-section th,
+.admin-section td {
+  padding: 12px 18px;
+  text-align: left;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Filas */
+.admin-section tbody tr {
+  transition: background 0.3s ease;
+}
+
+.admin-section tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Estado visual si querés reutilizarlo para disponibilidad */
+.estado-disponible {
+  background-color: #00c853;
+  color: #fff;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+.estado-ocupada {
+  background-color: #d50000;
+  color: #fff;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .admin-section table {
+    width: 100%;
+  }
+
+  .admin-section th,
+  .admin-section td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ===== Botones ===== */
+.btn-primary {
+  background-color: #00bcd4 !important;
+  border: none !important;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0097a7 !important;
+}
+
+.btn-danger {
+  background-color: #d32f2f !important;
+  border: none !important;
+  transition: 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #b71c1c !important;
+}
+
+/* ===== Mensajes ===== */
+.text-info {
+  color: #00e5ff !important;
+  font-weight: 500;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .admin-section {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .admin-title {
+    font-size: 1.6rem;
+  }
+
+  .admin-section th,
+  .admin-section td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}

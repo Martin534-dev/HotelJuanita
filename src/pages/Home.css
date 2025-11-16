@@ -1,0 +1,72 @@
+.home-container {
+  position: relative;
+  height: calc(100vh - 60px);
+  /* 🔹 Ruta correcta hacia la imagen */
+  background: url("../assets/301986-frederika_1920x1080.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px); /* 🔹 efecto borroso moderno */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text {
+  color: white;
+  max-width: 700px;
+  padding: 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-text h2 span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00bcd4;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+.hero-text .btn {
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+.hero-text .btn:hover {
+  transform: scale(1.05);
+  background-color: #00bcd4;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

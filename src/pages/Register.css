@@ -1,0 +1,123 @@
+/* ===== Fondo ===== */
+.register-page {
+  position: relative;
+  min-height: 100vh;
+  background: url("../assets/301986-frederika_1920x1080.jpg") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ===== Capa de blur ===== */
+.register-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+/* ===== Contenedor ===== */
+.register-container {
+  position: relative;
+  z-index: 2;
+  width: 380px;
+  padding: 40px 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  animation: fadeInUp 1s ease both;
+}
+
+/* ===== Título ===== */
+.register-container h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* ===== Inputs ===== */
+.register-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.register-container input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
+}
+
+.register-container input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+}
+
+/* ===== Botón ===== */
+.register-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.register-container button:hover {
+  background-color: #0097a7;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+}
+
+/* ===== Mensajes ===== */
+.success {
+  color: #8de02c;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.error {
+  color: #ff5252;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* ===== Enlace ===== */
+.link-login {
+  color: #00bcd4;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.link-login:hover {
+  text-decoration: underline;
+}
+
+/* ===== Animación ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

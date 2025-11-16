@@ -1,0 +1,147 @@
+/* ======== RESET GLOBAL ======== */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======== NAVBAR ======== */
+nav {
+  background-color: #2c3e50;         /* azul oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;                         /* espacio entre links */
+  padding: 14px 0;                   /* alto visible */
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: sticky;                  /* 🔝 siempre visible */
+  top: 0;
+  z-index: 1000;
+}
+
+/* ======== LINKS DEL NAVBAR ======== */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f1c40f;                    /* dorado al pasar */
+}
+
+/* ======== BOTÓN DE CERRAR SESIÓN ======== */
+nav button {
+  background-color: #e74c3c;
+  color: #ffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background-color: #c0392b;
+}
+
+/* ======== LOGIN CONTAINER ======== */
+.login-container {
+  background-color: #fff;
+  width: 360px;
+  margin: 80px auto;
+  padding: 35px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.login-container button {
+  width: 100%;
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #1a252f;
+}
+
+/* ======== ENLACE DE REGISTRO ======== */
+.registro-link {
+  margin-top: 10px;
+  color: #333;
+}
+
+.registro-link a {
+  color: #6c2bb9;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.registro-link a:hover {
+  color: #8e44ad;
+}
+
+/* ======== MENSAJE ALERTA ======== */
+.alerta {
+  color: red;
+  font-weight: 600;
+  margin-bottom: 10px;
+  animation: fadeOut 3s ease-in-out forwards;
+}
+
+/* ======== ANIMACIÓN DE DESVANECIMIENTO ======== */
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.btn-perfil {
+  border: 1px solid #00bcd4;
+  color: #00e5ff;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.btn-perfil:hover {
+  background: #00bcd4;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.btn-perfil {
+  border: 1px solid #00bcd4;
+  color: #00e5ff;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.btn-perfil:hover {
+  background: #00bcd4;
+  color: #fff;
+  transform: scale(1.05);
+}
+

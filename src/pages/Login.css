@@ -1,0 +1,132 @@
+/* === Fondo general con imagen === */
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  background: url("../assets/301986-frederika_1920x1080.jpg") center/cover
+    no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* === Capa de blur === */
+.auth-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Card principal === */
+.auth-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  padding: 40px 35px;
+  width: 90%;
+  max-width: 400px;
+  color: #fff;
+  animation: fadeInUp 0.8s ease;
+}
+
+/* === Título === */
+.auth-title {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+/* === Inputs === */
+.auth-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.305);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.auth-card input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px #00bcd4;
+}
+
+/* === Botón === */
+.btn-auth {
+  width: 100%;
+  padding: 10px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-auth:hover {
+  background-color: #0097a7;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+}
+
+/* === Mensajes === */
+.auth-msg {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #00e5ff;
+}
+
+/* === Footer === */
+.auth-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.auth-link {
+  color: #00c4d6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* === Animación === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Placeholders mejorados (gris claro visible) ===== */
+.auth-card input::placeholder {
+  color: rgba(235, 235, 235, 0.85); /* gris perlado más visible */
+  font-weight: 500;
+}
+
+.auth-card input {
+  color: #ffffff; /* texto escrito en blanco puro */
+}

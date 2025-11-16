@@ -1,0 +1,173 @@
+/* ===== Fondo general ===== */
+.contacto-page {
+  position: relative;
+  min-height: calc(100vh - 60px);
+  background: url("../assets/301986-frederika_1920x1080.jpg") center/cover no-repeat fixed;
+  overflow: hidden;
+}
+
+/* ===== Overlay con blur ===== */
+.contacto-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 🔹 centrado vertical */
+  padding: 0 20px;
+  color: #fff;
+}
+
+/* ===== Contenedor dividido ===== */
+.contacto-contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* 🔹 alineación centrada verticalmente */
+  width: 90%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+/* ===== Columna izquierda ===== */
+.contacto-izquierda {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeInLeft 1s ease both;
+}
+
+.contacto-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: left;
+}
+
+/* ===== Formulario ===== */
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  width: 100%;
+}
+
+.contacto-form label {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.6);
+}
+
+/* 🔹 Placeholder elegante */
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Botón ===== */
+.contacto-form button {
+  align-self: flex-start;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 24px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contacto-form button:hover {
+  background-color: #0097a7;
+  transform: scale(1.05);
+}
+
+/* ===== Mensaje de estado ===== */
+.estado-envio {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #ffd700;
+}
+
+/* ===== Columna derecha (mapa) ===== */
+.contacto-derecha {
+  flex: 1;
+  max-width: 50%;
+  height: 500px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  animation: fadeInRight 1s ease both;
+}
+
+/* ===== Animaciones ===== */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .contacto-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacto-izquierda,
+  .contacto-derecha {
+    max-width: 100%;
+  }
+
+  .contacto-derecha {
+    height: 350px;
+  }
+}

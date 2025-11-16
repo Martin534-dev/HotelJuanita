@@ -1,0 +1,146 @@
+/* ===== Fondo general ===== */
+.misreservas-page {
+  position: relative;
+  min-height: 100vh; /* ✅ permite scroll si es más largo */
+  background: url("../assets/301986-frederika_1920x1080.jpg") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ✅ empieza arriba para no cortarse */
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Overlay con blur ===== */
+.misreservas-overlay {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+/* ===== Contenedor principal ===== */
+.misreservas-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: none;
+  border-bottom: none;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  padding: 35px 30px;
+  backdrop-filter: blur(8px);
+  animation: fadeInUp 0.8s ease;
+}
+
+/* ===== Animación ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Título ===== */
+.misreservas-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Tabla ===== */
+.misreservas-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.misreservas-table thead {
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.misreservas-table th,
+.misreservas-table td {
+  padding: 12px 18px;
+  text-align: left;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.misreservas-table tbody tr {
+  transition: background 0.3s ease;
+}
+
+.misreservas-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Estados ===== */
+.estado-pendiente {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+.estado-pagada {
+  background-color: #00c853;
+  color: #fff;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+.estado-cancelada {
+  background-color: #d50000;
+  color: #fff;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .misreservas-contenedor {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .misreservas-title {
+    font-size: 1.6rem;
+  }
+
+  .misreservas-table th,
+  .misreservas-table td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}

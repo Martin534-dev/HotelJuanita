@@ -1,0 +1,194 @@
+/* ===== Fondo general ===== */
+.mapa-page {
+  position: relative;
+  min-height: 100vh;
+  background: url("../assets/301986-frederika_1920x1080.jpg") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Overlay con blur ===== */
+.mapa-overlay {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+/* ===== Contenedor principal ===== */
+.mapa-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: none;
+  border-bottom: none;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  padding: 35px 30px;
+  backdrop-filter: blur(8px);
+  animation: fadeInUp 0.8s ease;
+}
+
+/* ===== Título ===== */
+.mapa-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Mensaje ===== */
+.mapa-info {
+  color: #00bcd4;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* ===== Grid ===== */
+.mapa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* ===== Tarjeta de habitación ===== */
+.mapa-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, background 0.3s ease;
+  color: #fff; /* 🔹 Todos los textos en blanco */
+}
+
+.mapa-card h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #fff; /* 🔹 Título habitación blanco */
+}
+
+.mapa-card p {
+  color: #f1f1f1; /* 🔹 Texto secundario blanco suave */
+  margin-bottom: 10px;
+}
+
+.mapa-card:hover {
+  transform: scale(1.04);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== Estados ===== */
+.mapa-estado {
+  display: inline-block;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin: 8px 0 15px;
+}
+
+.estado-disponible {
+  background-color: #00c853;
+  color: #fff;
+}
+
+.estado-ocupada {
+  background-color: #d50000;
+  color: #fff;
+}
+
+.estado-cerrada {
+  background-color: #757575;
+  color: #fff;
+}
+
+/* ===== Botones ===== */
+.mapa-botones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-abrir,
+.btn-cerrar,
+.btn-ocupar {
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-abrir {
+  background-color: #00bcd4;
+}
+
+.btn-abrir:hover {
+  background-color: #0097a7;
+  transform: scale(1.05);
+}
+
+.btn-cerrar {
+  background-color: #757575;
+}
+
+.btn-cerrar:hover {
+  background-color: #616161;
+  transform: scale(1.05);
+}
+
+.btn-ocupar {
+  background-color: #e53935;
+}
+
+.btn-ocupar:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+}
+
+/* ===== Animación ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .mapa-contenedor {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .mapa-title {
+    font-size: 1.6rem;
+  }
+}

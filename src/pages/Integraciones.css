@@ -1,0 +1,133 @@
+/* ===== Fondo general ===== */
+.integraciones-page {
+  position: relative;
+  min-height: 100vh;
+  background: url("../assets/301986-frederika_1920x1080.jpg") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Overlay con blur ===== */
+.integraciones-overlay {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 80px 20px 60px 20px;
+  box-sizing: border-box;
+}
+
+/* ===== Título principal ===== */
+.integraciones-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease;
+}
+
+/* ===== Subtítulo ===== */
+.integraciones-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* ===== Tarjetas contenedoras ===== */
+.integraciones-card {
+  width: 90%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: none;
+  border-bottom: none;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.8s ease;
+  text-align: center;
+}
+
+/* ===== Encabezado de cada tarjeta ===== */
+.integraciones-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Iconos ===== */
+.integraciones-card h3 i {
+  font-size: 1.8rem;
+}
+
+/* ===== Texto dentro de las tarjetas ===== */
+.integraciones-card p {
+  color: #f1f1f1;
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+.integraciones-card p strong {
+  color: #00bcd4;
+  font-weight: 600;
+}
+
+/* ===== Animaciones ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .integraciones-title {
+    font-size: 1.8rem;
+  }
+
+  .integraciones-card {
+    padding: 20px;
+  }
+
+  .integraciones-card h3 {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,193 @@
+/* ===== Fondo general ===== */
+.reserva-page {
+  position: relative;
+  min-height: 100vh; /* ✅ permite scroll si es más largo */
+  background: url("../assets/301986-frederika_1920x1080.jpg") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ✅ empieza arriba si hay más contenido */
+  overflow-y: auto; /* ✅ activa scroll vertical */
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Overlay con blur ===== */
+.reserva-overlay {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px; /* ✅ margen superior para separarlo del navbar */
+  box-sizing: border-box;
+}
+
+/* ===== Contenedor principal ===== */
+.reserva-contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: none;
+  border-bottom: none;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  padding: 35px 30px;
+  backdrop-filter: blur(8px);
+  animation: fadeInUp 0.8s ease;
+}
+
+/* ===== Animación ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Título ===== */
+.reserva-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Info del usuario ===== */
+.reserva-info {
+  margin-bottom: 20px;
+  color: #f8f9fa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.reserva-info p {
+  margin: 4px 0;
+  text-align: left;
+}
+
+.reserva-info strong {
+  color: #00bcd4;
+  font-weight: 600;
+}
+
+/* ===== Formulario ===== */
+.reserva-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.reserva-form label {
+  display: block;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.reserva-form input,
+.reserva-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #222;
+  outline: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.reserva-form input:focus,
+.reserva-form select:focus {
+  background: #fff;
+  box-shadow: 0 0 0 2px #00bcd4;
+}
+
+/* ===== Capacidad ===== */
+.capacidad-info {
+  font-size: 0.85rem;
+  color: #ffd700;
+  text-align: center;
+  font-weight: 500;
+  margin-top: -5px;
+}
+
+/* ===== Resumen de precios ===== */
+.resumen-precio {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #fff;
+  width: 100%;
+}
+
+.resumen-precio p {
+  margin: 0;
+}
+
+/* ===== Botón ===== */
+.reserva-form button {
+  width: 100%;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.reserva-form button:hover {
+  background-color: #0097a7;
+  transform: scale(1.03);
+}
+
+/* ===== Mensaje ===== */
+.mensaje {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+}
+
+.mensaje::before {
+  content: "• ";
+  color: #00bcd4;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .reserva-contenedor {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .reserva-title {
+    font-size: 1.6rem;
+  }
+}
